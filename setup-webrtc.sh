@@ -1,7 +1,8 @@
 #!/bin/sh 
 
 echo "Demonstração de depuração/log de funcionamento do webRTC"
-echo "Instalação do VLC e Chromium - tecle enter para continuar"
+echo "Instalação do VLC e Chromium - tecle ENTER para continuar"
+read R
 #   - como visualizar
 #   - como interpretar
 sudo apt update
@@ -10,7 +11,7 @@ sudo apt install chromium-browser
 
 echo "Emulacao de Webcam para uso no navegador com webRTC"
 echo "Download de video exemplo e instalação de modulo do kernel - ENTER para continuar"
-
+read R
 cd ~
 mkdir lab-webrtc
 cd lab-webrtc
@@ -30,6 +31,7 @@ sudo modprobe v4l2loopback card_label="Falsa Webcam" exclusive_caps=1
     
 echo "Instação de ambiente de teste do WebRTC"
 echo "Instalação do docker e do serviço - ENTER para continuar"
+read R
 #   - instalar o docker
 sudo apt install docker.io
 # - instalar o serviço de teste webRTC
