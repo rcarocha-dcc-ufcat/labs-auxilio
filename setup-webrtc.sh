@@ -1,7 +1,11 @@
 #!/bin/sh 
 
-echo "Demonstração de depuração/log de funcionamento do webRTC"
-echo "Instalação do VLC e Chromium - tecle ENTER para continuar"
+sudo apt update 
+sudo apt install boxes
+clear
+# https://github.com/rcarocha-dcc-ufcat/labs-auxilio.git
+echo "Demonstração de depuração/log de funcionamento do webRTC" | boxes -p h5v1
+echo "Instalação do VLC e Chromium - tecle ENTER para continuar" | boxes -p h5v1
 read R
 #   - como visualizar
 #   - como interpretar
@@ -9,8 +13,8 @@ sudo apt update
 sudo apt install vlc
 sudo apt install chromium-browser
 
-echo "Emulacao de Webcam para uso no navegador com webRTC"
-echo "Download de video exemplo e instalação de modulo do kernel - ENTER para continuar"
+echo "Emulacao de Webcam para uso no navegador com webRTC" | boxes -p h5v1
+echo "Download de video exemplo e instalação de modulo do kernel - ENTER para continuar" | boxes -p h5v1
 read R
 cd ~
 mkdir lab-webrtc
@@ -29,8 +33,8 @@ sudo modprobe v4l2loopback card_label="Falsa Webcam" exclusive_caps=1
 #    https://github.com/umlaeute/v4l2loopback
 #    ls -1 /sys/devices/virtual/video4linux
     
-echo "Instação de ambiente de teste do WebRTC"
-echo "Instalação do docker e do serviço - ENTER para continuar"
+echo "Instação de ambiente de teste do WebRTC" | boxes -p h5v1
+echo "Instalação do docker e do serviço - ENTER para continuar" | boxes -p h5v1
 read R
 #   - instalar o docker
 sudo apt install docker.io
