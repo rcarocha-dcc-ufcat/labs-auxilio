@@ -12,6 +12,7 @@ read R
 sudo apt update
 sudo apt install vlc
 sudo apt install chromium-browser
+# usar o snap é melhor??
 
 echo "Emulacao de Webcam para uso no navegador com webRTC" | boxes -p h5v1
 echo "Download de video exemplo e instalação de modulo do kernel - ENTER para continuar" | boxes -p h5v1
@@ -19,8 +20,9 @@ read R
 cd ~
 mkdir lab-webrtc
 cd lab-webrtc
-wget http://link.twitch.tv/synctest-h264
-mv synctest-h264 synctest-h264.mp4
+wget -q http://link.twitch.tv/synctest-h264 -O ~/lab-webrtc/synctest-h264.mp4 &
+# OLD: wget http://link.twitch.tv/synctest-h264
+#      mv synctest-h264 synctest-h264.mp4
 
 #   - download do video a ser utilizado: wget http://link.twitch.tv/synctest-h264
 #   - instalação do serviço de webcam emulada
