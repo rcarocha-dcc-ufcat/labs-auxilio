@@ -47,3 +47,4 @@ cd apprtc
 wget https://raw.githubusercontent.com/webrtc/apprtc/master/Dockerfile
 cd ..
 sudo docker build apprtc/
+echo "Instalação TERMINADA!" | boxes -p h5v1
